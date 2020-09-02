@@ -1,8 +1,8 @@
 .calendar {
   display: flex;
   flex-wrap: wrap;
-  gap: 1px;
-  width: 7 * $ceilSize + 6 * $ceilGap;
+  gap: $ceilGap;
+  width: $daysCount * $ceilSize + ($daysCount - 1) * $ceilGap;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -15,7 +15,7 @@
     height: $ceilSize;
     text-align: center;
     line-height: $ceilSize;
-    transition: all 0.5s;
+    transition: background-color 0.5s, transform 0.5s;
 
     &:hover {
       cursor: pointer;
@@ -43,7 +43,7 @@
 
   @each $number, $day in $days {
     &-#{$day} > div:first-child {
-      margin-left: calc((#{$ceilSize} + #{$ceilGap}) * #{$number});
+      margin-left: ($ceilSize + $ceilGap) * $number;
     }
   }
 

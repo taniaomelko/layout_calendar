@@ -29,7 +29,7 @@ body {
   height: 100px;
   text-align: center;
   line-height: 100px;
-  transition: all 0.5s;
+  transition: background-color 0.5s, transform 0.5s;
 }
 
 .calendar > div:hover {
@@ -163,31 +163,31 @@ body {
 }
 
 .calendar-mon > div:first-child {
-  margin-left: calc((100px + 1px) * 0);
+  margin-left: 0;
 }
 
 .calendar-tue > div:first-child {
-  margin-left: calc((100px + 1px) * 1);
+  margin-left: 101px;
 }
 
 .calendar-wed > div:first-child {
-  margin-left: calc((100px + 1px) * 2);
+  margin-left: 202px;
 }
 
 .calendar-thu > div:first-child {
-  margin-left: calc((100px + 1px) * 3);
+  margin-left: 303px;
 }
 
 .calendar-fri > div:first-child {
-  margin-left: calc((100px + 1px) * 4);
+  margin-left: 404px;
 }
 
 .calendar-sat > div:first-child {
-  margin-left: calc((100px + 1px) * 5);
+  margin-left: 505px;
 }
 
 .calendar-sun > div:first-child {
-  margin-left: calc((100px + 1px) * 6);
+  margin-left: 606px;
 }
 
 .calendar-28 > div:nth-child(n+29) {
