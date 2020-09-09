@@ -8,8 +8,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  & > div {
-    background-color: #eee;
+  > div {
+    background-color: $c-grey;
     border: 1px solid;
     width: $ceilSize;
     height: $ceilSize;
@@ -19,7 +19,7 @@
 
     &:hover {
       cursor: pointer;
-      background-color: pink;
+      background-color: $c-pink;
       transform: translateY(-20px);
     }
 
@@ -31,15 +31,6 @@
       }
     }
   }
-
-  $days:
-    0 "mon",
-    1 "tue",
-    2 "wed",
-    3 "thu",
-    4 "fri",
-    5 "sat",
-    6 "sun";
 
   @each $number, $day in $days {
     &-#{$day} > div:first-child {
